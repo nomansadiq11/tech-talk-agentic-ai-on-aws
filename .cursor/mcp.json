@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "awslabs.dynamodb-mcp-server": {
+      "autoApprove": [],
+      "disabled": false,
+      "timeout": 60,
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "awslabs.dynamodb-mcp-server@latest"
+      ],
+      "env": {
+        "DDB-MCP-READONLY": "false",
+        "AWS_PROFILE": "nsadiq",
+        "AWS_REGION": "eu-west-1",
+        "FASTMCP_LOG_LEVEL": "ERROR"
+      }
+    }
+  }
+}

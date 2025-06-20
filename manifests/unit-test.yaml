@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: agentic-ai-devops-2
+  labels:
+    app: agentic-ai-2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: agentic-ai
+  template:
+    metadata:
+      labels:
+        app: agentic-ai
+    spec:
+      serviceAccountName: agentic-ai-sa-2
+      containers:
+        - name: agent
+          image: agent-loop:latest
+          imagePullPolicy: IfNotPresent
+          command: ["python", "agent_loop.py"]
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: agentic-ai-sa-2
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: agentic-ai-role-2
+rules:
+  - apiGroups: [""]
+    resources: ["pods", "pods/log", "events"]
+    verbs: ["get", "list", "watch", "delete", "patch"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: agentic-ai-rolebinding-2
+roleRef:
+  kind: Role
+  name: agentic-ai-role-2
+  apiGroup: rbac.authorization.k8s.io
+subjects:
+  - kind: ServiceAccount
+    name: agentic-ai-sa
