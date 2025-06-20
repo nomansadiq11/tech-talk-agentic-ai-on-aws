@@ -105,7 +105,7 @@ If a pod goes into `CrashLoopBackOff`, the agent will:
 
 ## 📢 Talk: Autonomous DevOps with Agentic AI on AWS
 
-This repository is part of the [Agent Con Talk](https://agentcon.io) demonstrating how intelligent, goal-driven agents can operate inside Kubernetes using local AI models and infrastructure APIs.
+This repository is part of the [Agent Con Talk](https://globalai.community/chapters/dubai/events/agentcon-2025-dubai/) demonstrating how intelligent, goal-driven agents can operate inside Kubernetes using local AI models and infrastructure APIs.
 
 ## 🤝 Contributions
 
@@ -118,7 +118,7 @@ Feel free to fork and adapt! You can add:
 
 **Noman Sadiq**
 Senior DevOps Engineer, passionate about AI in infrastructure
-Follow me on [LinkedIn](https://linkedin.com/in/nomansadiq)
+Follow me on [LinkedIn](https://www.linkedin.com/in/nomancs/)
 
 ---
 
